@@ -7,6 +7,10 @@ body{
     background-image: linear-gradient( 91deg,  rgba(169,200,232,1) 18.5%, rgba(103,169,218,1) 81% );
     background-attachment: scroll;
     font-family: var(--fonte-principal);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 img#logo{
@@ -26,8 +30,8 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10%;
-    height: 210px;
+    gap: 5%;
+    height: 300px;
     max-width: 900px;
     min-width: 600px;
     margin: 0 auto;
@@ -35,12 +39,13 @@ main{
     margin-bottom: 40px;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
+    box-sizing: border-box;
 }
 
-section.textos ul{
+section.textos{
     display: flex;
     flex-direction: column;
-    height: 170px;
+    height: 210px;
     max-width: 440px;
     min-width: 250px;
     justify-content: center;
@@ -63,10 +68,11 @@ section.textos ul{
 
 section.formulario{
     height: 170px;
-    max-width: 440px;
-    min-width: 300px;
+    width: 290px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 input, button{
