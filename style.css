@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+:root{
+    --fonte-principal: 'Bitter', cursive;
+    --fundo-principal: linear-gradient( 91deg,  rgba(169,200,232,1) 18.5%, rgba(103,169,218,1) 81% );
+}
+
+body{
+    background-image: var(--fundo-principal);
+    background-attachment: scroll;
+    font-family: var(--fonte-principal);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img#logo{
+    display: block;
+    margin: auto;
+}
+
+header, footer{
+    text-align: center;
+}
+
+header h1{
+    color: rgb(69, 69, 163);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 220px;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+section.textos{
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    max-width: 500px;
+    min-width: 250px;
+    justify-content: center;
+}
+
+.lista{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lista img{
+    width: 28px;
+    height: 35px;
+}
+
+.lista p{
+    font-weight: bold;
+}
+
+#abrirModal{
+    height: 130px;
+    width: 130px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#abrirModal p{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-top: 33%;
+}
+
+#abrirModal:hover{
+    height: 140px;
+    width: 140px;
+}
+
+input, button{
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    font-family: var(--fonte-principal);
+}
+
+input{
+    outline: none;
+    padding-left: 9px;
+    padding-right: 9px;
+    border: 1px solid rgb(104, 104, 224);
+    background-color: rgb(162, 162, 255);
+    width: 18em;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input#nome{
+    margin-bottom: 3%;
+}
+
+input#email{
+    margin-bottom: 13%;
+}
+
+button{
+    border: 3px solid rgb(162, 162, 255);
+    background-color: rgb(104, 104, 224);
+    width: 19.5em;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: rgb(69, 69, 163);
+}
+
+footer h2{
+    color: rgb(69, 69, 163);
+}
+
+footer p{
+    font-weight: bold;
+    font-size: smaller;
+}
+
+#modal{
+    background-image: var(--fundo-principal);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+}
+
+#modal img{
+    width: 90px;
+}
+
+#modal h2{
+    color: rgb(69, 69, 163);
+}
+
+#fade, #modal{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+#modal.hide{
+    top: 0;
+}
+
+#modal.hide, #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
